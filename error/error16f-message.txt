@@ -1,0 +1,1 @@
+Error at line 34: function sin cannot be used as a variable.

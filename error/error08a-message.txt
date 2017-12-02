@@ -1,0 +1,1 @@
+Error at line 6: (int > bool) is not allowed.

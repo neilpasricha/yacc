@@ -1,0 +1,8 @@
+﻿main()
+{
+    int x;
+    bool b;
+    x = x + (1/2+x%3)*2;
+    b = 1.5 < true;
+    print x;
+}

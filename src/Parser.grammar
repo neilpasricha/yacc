@@ -1,0 +1,28 @@
+
+
+program       -> decl_list main_decl
+decl_list     -> decl_list decl | eps
+decl          -> fun_decl
+type_spec     -> INT | FLOAT | BOOL
+main_decl     -> MAIN LPAREN RPAREN compound_stmt
+fun_decl      -> type_spec ID LPAREN params RPAREN SEMI
+params        -> param_list | eps
+param_list    -> param_list COMMA param | param
+param         -> type_spec
+stmt_list     -> stmt_list stmt | eps
+stmt          -> expr_stmt | print_stmt | compound_stmt | if_stmt | while_stmt | return_stmt
+print_stmt    -> PRINT expr SEMI
+expr_stmt     -> ID ASSIGN expr SEMI | SEMI
+while_stmt    -> WHILE LPAREN expr RPAREN stmt
+compound_stmt -> BEGIN local_decls stmt_list END
+local_decls   -> local_decls local_decl | eps
+local_decl    -> type_spec ID SEMI
+if_stmt       -> IF LPAREN expr RPAREN stmt ELSE stmt
+return_stmt   -> RETURN SEMI
+arg_list      -> arg_list COMMA expr | expr
+args          -> arg_list | eps
+expr          -> expr OR expr | expr AND expr | NOT expr
+               | expr EQ expr | expr NE expr | expr LE expr | expr GT expr | expr GE expr | expr LT expr
+               | expr PLUS expr | expr MINUS expr | expr MUL expr | expr DIV expr | expr MOD expr
+               | LPAREN expr RPAREN | ID | ID LPAREN args RPAREN
+               | NUM | REAL | TRUE | FALSE

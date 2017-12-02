@@ -1,0 +1,33 @@
+﻿bool boolfunc();
+int  func_int(int);
+float sin(float);
+float tan2(float,float);
+
+main()
+{
+    int x;
+    float y;
+    bool b;
+    x = x + (1/2+x%3)*2;
+    b = x > 10;
+    b = b or true and false;
+
+    print x;
+
+    if( b ) {
+        int y;
+        y = y + x;
+    } else {
+    }
+
+    while ( b != true )
+    {
+        int y;
+        y = y + 2;
+        x = x * y;
+    }
+
+    b = boolfunc();
+
+    return;
+}

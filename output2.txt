@@ -1,0 +1,124 @@
+running test ./error/error01a-message.txt
+Error: syntax error
+Error: stack underflow. aborting...
+running test ./error/error02a-message.txt
+Error: syntax error
+Error: stack underflow. aborting...
+running test ./error/error03a-message.txt
+Error: syntax error
+Error: stack underflow. aborting...
+running test ./error/error03b-message.txt
+Error at line 4: try to assign float value to int variable x.
+running test ./error/error03c-message.txt
+Error at line 4: (int + bool) is not allowed.
+running test ./error/error03d-message.txt
+Error at line 4: try to assign float value to int variable x.
+running test ./error/error04a-message.txt
+Error at line 5: undefined xyz is used.
+running test ./error/error05a-message.txt
+Error at line 4: try to assign float value to int variable x.
+running test ./error/error05b-message.txt
+Error at line 4: try to assign bool value to int variable x.
+running test ./error/error06a-message.txt
+Error at line 4: try to assign float value to int variable x.
+running test ./error/error06b-message.txt
+Error at line 4: (bool + int) is not allowed.
+running test ./error/error06c-message.txt
+Error at line 4: (float - bool) is not allowed.
+running test ./error/error06d-message.txt
+Error at line 4: (bool * float) is not allowed.
+running test ./error/error06e-message.txt
+Error at line 4: (bool * bool) is not allowed.
+running test ./error/error07a-message.txt
+Error at line 5: (int + bool) is not allowed.
+running test ./error/error07b-message.txt
+Error at line 5: try to assign float value to int variable x.
+running test ./error/error08a-message.txt
+Error at line 6: (int > bool) is not allowed.
+running test ./error/error08b-message.txt
+Error at line 6: (float < bool) is not allowed.
+running test ./error/error08c-message.txt
+Error at line 6: (bool <= int) is not allowed.
+running test ./error/error08d-message.txt
+Error at line 6: (bool <= float) is not allowed.
+running test ./error/error08e-message.txt
+Error at line 6: (bool <= bool) is not allowed.
+running test ./error/error08f-message.txt
+Error at line 6: try to assign float value to bool variable b.
+running test ./error/error09a-message.txt
+Error at line 7: (int and bool) is not allowed.
+running test ./error/error09b-message.txt
+Error at line 7: (float and bool) is not allowed.
+running test ./error/error09c-message.txt
+Error at line 7: (int or int) is not allowed.
+running test ./error/error09d-message.txt
+Error at line 7: (int or float) is not allowed.
+running test ./error/error09e-message.txt
+Error at line 7: (float or float) is not allowed.
+running test ./error/error09f-message.txt
+Error at line 7: (float or int) is not allowed.
+running test ./error/error09g-message.txt
+Error at line 7: (bool and int) is not allowed.
+running test ./error/error09h-message.txt
+Error at line 7: (bool or float) is not allowed.
+running test ./error/error10a-message.txt
+Error at line 11: (bool + int) is not allowed.
+running test ./error/error10b-message.txt
+Error at line 11: (not int) is not allowed.
+running test ./error/error10c-message.txt
+Error at line 11: (not float) is not allowed.
+running test ./error/error10d-message.txt
+Error at line 11: (int == bool) is not allowed.
+running test ./error/error10e-message.txt
+Error at line 11: (float == bool) is not allowed.
+running test ./error/error10f-message.txt
+Error at line 11: (bool != float) is not allowed.
+running test ./error/error10g-message.txt
+Error at line 11: (bool != int) is not allowed.
+running test ./error/error10h-message.txt
+Error at line 11: if statement accepts only boolean variables for condition.
+running test ./error/error11a-message.txt
+Error: syntax error
+Error: stack underflow. aborting...
+running test ./error/error11b-message.txt
+Error at line 17: while statement accepts only boolean variable for condition.
+running test ./error/error12a-message.txt
+Error: syntax error
+Error: stack underflow. aborting...
+running test ./error/error13a-message.txt
+Error: syntax error
+Error: stack underflow. aborting...
+running test ./error/error13b-message.txt
+Error: syntax error
+Error: stack underflow. aborting...
+running test ./error/error13c-message.txt
+Error at line 30: try to assign bool value to float variable y.
+running test ./error/error14a-message.txt
+Error at line 30: try to assign bool value to int variable x.
+running test ./error/error14b-message.txt
+Error at line 30: incorrect number of parameters are passed to function boolfunc(...).
+running test ./error/error15a-message.txt
+Error at line 31: incorrect type of parameter(s) is passed to function func_int(...).
+running test ./error/error15b-message.txt
+Error at line 31: incorrect type of parameter(s) is passed to function func_int(...).
+running test ./error/error15c-message.txt
+Error: syntax error
+Error: stack underflow. aborting...
+running test ./error/error16a-message.txt
+Error at line 33: incorrect number of parameters are passed to function tan2(...).
+running test ./error/error16b-message.txt
+Error at line 33: undefined tan3 is used.
+running test ./error/error16c-message.txt
+Error at line 34: int variable x cannot be used as a function.
+running test ./error/error16d-message.txt
+Error at line 34: float variable y cannot be used as a function.
+running test ./error/error16e-message.txt
+Error at line 34: bool variable b cannot be used as a function.
+running test ./error/error16f-message.txt
+Error at line 34: function sin cannot be used as a variable.
+running test ./error/error17a-message.txt
+Error at line 33: undefined z is used.
+running test ./error/error17b-message.txt
+Error at line 19: the variable y is already defined in this block.
+running test ./error/error17c-message.txt
+Error at line 20: try to assign float value to bool variable y.

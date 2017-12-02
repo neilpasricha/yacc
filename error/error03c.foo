@@ -1,0 +1,5 @@
+﻿main()
+{
+    int x;
+    x = x + true;
+}

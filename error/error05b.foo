@@ -1,0 +1,6 @@
+﻿main()
+{
+    int x;
+    x = true;
+    print x;
+}

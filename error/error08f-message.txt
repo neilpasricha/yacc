@@ -1,0 +1,1 @@
+Error at line 6: try to assign float value to bool variable b.

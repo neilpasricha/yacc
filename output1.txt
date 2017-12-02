@@ -1,0 +1,126 @@
+running test ./error/error01a.foo
+Error: syntax error
+Error: stack underflow. aborting...
+running test ./error/error02a.foo
+Error: syntax error
+Error: stack underflow. aborting...
+running test ./error/error03a.foo
+Error: syntax error
+Error: stack underflow. aborting...
+running test ./error/error03b.foo
+Error(313): try to assign wrong type to x at line 4
+running test ./error/error03c.foo
+(ADD)Error: unsupported operation at line 4
+running test ./error/error03d.foo
+Error(313): try to assign wrong type to x at line 4
+running test ./error/error04a.foo
+(ID)Error: Expression is invalid:  xyz at line 5
+running test ./error/error05a.foo
+Error(313): try to assign wrong type to x at line 4
+running test ./error/error05b.foo
+Error(313): try to assign wrong type to x at line 4
+running test ./error/error06a.foo
+Error(313): try to assign wrong type to x at line 4
+running test ./error/error06b.foo
+(ADD)Error: unsupported operation at line 4
+running test ./error/error06c.foo
+(MINUS)Error: unsupported operation at line 4
+running test ./error/error06d.foo
+(MUL)Error: unsupported operation at line 4
+running test ./error/error06e.foo
+(MUL)Error: unsupported operation at line 4
+running test ./error/error07a.foo
+(ADD)Error: unsupported operation at line 5
+running test ./error/error07b.foo
+Error(313): try to assign wrong type to x at line 5
+running test ./error/error08a.foo
+(GTHAN)Error: unsupported operation at line 6
+running test ./error/error08b.foo
+(LTHAN)Error: unsupported operation at line 6
+running test ./error/error08c.foo
+(LEQ)Error: unsupported operation at line 6
+running test ./error/error08d.foo
+(LEQ)Error: unsupported operation at line 6
+running test ./error/error08e.foo
+(LEQ)Error: unsupported operation at line 6
+running test ./error/error08f.foo
+Error(313): try to assign wrong type to b at line 6
+running test ./error/error09a.foo
+(AND)Error: unsupported operation at line 7
+running test ./error/error09b.foo
+(AND)Error: unsupported operation at line 7
+running test ./error/error09c.foo
+(OR)Error: unsupported operation at line 7
+running test ./error/error09d.foo
+(OR)Error: unsupported operation at line 7
+running test ./error/error09e.foo
+(OR)Error: unsupported operation at line 7
+running test ./error/error09f.foo
+(OR)Error: unsupported operation at line 7
+running test ./error/error09g.foo
+(AND)Error: unsupported operation at line 7
+running test ./error/error09h.foo
+(OR)Error: unsupported operation at line 7
+running test ./error/error10a.foo
+(ADD)Error: unsupported operation at line 11
+running test ./error/error10b.foo
+Error: syntax error
+Error: stack underflow. aborting...
+running test ./error/error10c.foo
+Error: syntax error
+Error: stack underflow. aborting...
+running test ./error/error10d.foo
+(EQ)Error: unsupported operation at line 11
+running test ./error/error10e.foo
+(EQ)Error: unsupported operation at line 11
+running test ./error/error10f.foo
+(NEQ)Error: unsupported operation at line 11
+running test ./error/error10g.foo
+(NEQ)Error: unsupported operation at line 11
+running test ./error/error10h.foo
+Error(CALL IF STMT2): Not a boolean in the if statement
+running test ./error/error11a.foo
+Error: syntax error
+Error: stack underflow. aborting...
+running test ./error/error11b.foo
+Error(CALL WHILE STMT2): Not a boolean in the if statement
+running test ./error/error12a.foo
+Error: syntax error
+Error: stack underflow. aborting...
+running test ./error/error13a.foo
+Error: syntax error
+Error: stack underflow. aborting...
+running test ./error/error13b.foo
+Error: syntax error
+Error: stack underflow. aborting...
+running test ./error/error13c.foo
+Error(313): try to assign wrong type to y at line 30
+running test ./error/error14a.foo
+Error(313): try to assign wrong type to x at line 30
+running test ./error/error14b.foo
+Error(CALL ID PARENSARGS): Incorrect type of arguments for boolfunc at line 30
+running test ./error/error15a.foo
+Error(CALL ID PARENSARGS): Incorrect type of arguments for func_int at line 30
+running test ./error/error15b.foo
+Error(CALL ID PARENSARGS): Incorrect type of arguments for func_int at line 31
+running test ./error/error15c.foo
+Error: syntax error
+Error: stack underflow. aborting...
+running test ./error/error16a.foo
+Error(CALL ID PARENS ARGS part 2): Incorrect number of arguments for tan2 at line 33
+running test ./error/error16b.foo
+Undefined(CALLIDPARENS3) tan3 is used at line 33
+running test ./error/error16c.foo
+Undefined(CALLIDPARENS3) x is used at line 34
+running test ./error/error16d.foo
+Undefined(CALLIDPARENS3) y is used at line 34
+running test ./error/error16e.foo
+Undefined(CALLIDPARENS3) b is used at line 34
+running test ./error/error16f.foo
+Success
+running test ./error/error17a.foo
+Error(313): try to assign wrong type to z at line 33
+running test ./error/error17b.foo
+Error(313): try to assign wrong type to z at line 34
+running test ./error/error17c.foo
+Error(313): try to assign wrong type to y at line 17

@@ -1,0 +1,1 @@
+Error at line 30: try to assign bool value to float variable y.

@@ -1,0 +1,1 @@
+Error at line 17: while statement accepts only boolean variable for condition.

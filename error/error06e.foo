@@ -1,0 +1,6 @@
+﻿main()
+{
+    int x;
+    x = x + (1/2+x%3)/(false * true);
+    print x;
+}

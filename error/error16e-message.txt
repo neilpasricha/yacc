@@ -1,0 +1,1 @@
+Error at line 34: bool variable b cannot be used as a function.

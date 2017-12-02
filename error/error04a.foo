@@ -1,0 +1,6 @@
+﻿main()
+{
+    int x;
+    x = x + 1;
+    print xyz;
+}

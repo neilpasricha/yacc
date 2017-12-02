@@ -1,0 +1,1 @@
+Error at line 4: try to assign float value to int variable x.

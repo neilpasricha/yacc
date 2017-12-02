@@ -1,0 +1,1 @@
+Error at line 4: (bool * float) is not allowed.

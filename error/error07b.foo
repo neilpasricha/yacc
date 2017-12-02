@@ -1,0 +1,7 @@
+﻿main()
+{
+    int x;
+    bool b;
+    x = x + (1/2+x%3.0)*2;
+    print x;
+}
