@@ -8,61 +8,61 @@ running test ./error/error03a.foo
 Error: syntax error
 Error: stack underflow. aborting...
 running test ./error/error03b.foo
-Error(313): try to assign wrong type to x at line 4
+Error at line 4: try to assign float value to int variable x.
 running test ./error/error03c.foo
-(ADD)Error: unsupported operation at line 4
+Error at line 4: (int + bool) is not allowed.
 running test ./error/error03d.foo
-Error(313): try to assign wrong type to x at line 4
+Error at line 4: try to assign float value to int variable x.
 running test ./error/error04a.foo
-(ID)Error: Expression is invalid:  xyz at line 5
+Error at line 5: undefined xyz is used.
 running test ./error/error05a.foo
-Error(313): try to assign wrong type to x at line 4
+Error at line 4: try to assign float value to int variable x.
 running test ./error/error05b.foo
-Error(313): try to assign wrong type to x at line 4
+Error at line 4: try to assign bool value to int variable x.
 running test ./error/error06a.foo
-Error(313): try to assign wrong type to x at line 4
+Error at line 4: try to assign float value to int variable x.
 running test ./error/error06b.foo
-(ADD)Error: unsupported operation at line 4
+Error at line 4: (bool + int) is not allowed.
 running test ./error/error06c.foo
-(MINUS)Error: unsupported operation at line 4
+Error at line 4: (float - bool) is not allowed.
 running test ./error/error06d.foo
-(MUL)Error: unsupported operation at line 4
+Error at line 4: (bool * float) is not allowed.
 running test ./error/error06e.foo
-(MUL)Error: unsupported operation at line 4
+Error at line 4: (bool * bool) is not allowed.
 running test ./error/error07a.foo
-(ADD)Error: unsupported operation at line 5
+Error at line 5: (int + bool) is not allowed.
 running test ./error/error07b.foo
-Error(313): try to assign wrong type to x at line 5
+Error at line 5: try to assign float value to int variable x.
 running test ./error/error08a.foo
-(GTHAN)Error: unsupported operation at line 6
+Error at line 6: (int > bool) is not allowed.
 running test ./error/error08b.foo
-(LTHAN)Error: unsupported operation at line 6
+Error at line 6: (float < bool) is not allowed.
 running test ./error/error08c.foo
-(LEQ)Error: unsupported operation at line 6
+Error at line 6: (bool <= int) is not allowed.
 running test ./error/error08d.foo
-(LEQ)Error: unsupported operation at line 6
+Error at line 6: (bool <= float) is not allowed.
 running test ./error/error08e.foo
-(LEQ)Error: unsupported operation at line 6
+Error at line 6: (bool <= bool) is not allowed.
 running test ./error/error08f.foo
-Error(313): try to assign wrong type to b at line 6
+Error at line 6: try to assign float value to bool variable b.
 running test ./error/error09a.foo
-(AND)Error: unsupported operation at line 7
+Error at line 7: (int and bool) is not allowed.
 running test ./error/error09b.foo
-(AND)Error: unsupported operation at line 7
+Error at line 7: (float and bool) is not allowed.
 running test ./error/error09c.foo
-(OR)Error: unsupported operation at line 7
+Error at line 7: (int or int) is not allowed.
 running test ./error/error09d.foo
-(OR)Error: unsupported operation at line 7
+Error at line 7: (int or float) is not allowed.
 running test ./error/error09e.foo
-(OR)Error: unsupported operation at line 7
+Error at line 7: (float or float) is not allowed.
 running test ./error/error09f.foo
-(OR)Error: unsupported operation at line 7
+Error at line 7: (float or int) is not allowed.
 running test ./error/error09g.foo
-(AND)Error: unsupported operation at line 7
+Error at line 7: (bool and int) is not allowed.
 running test ./error/error09h.foo
-(OR)Error: unsupported operation at line 7
+Error at line 7: (bool or float) is not allowed.
 running test ./error/error10a.foo
-(ADD)Error: unsupported operation at line 11
+Error at line 11: (bool + int) is not allowed.
 running test ./error/error10b.foo
 Error: syntax error
 Error: stack underflow. aborting...
@@ -70,20 +70,20 @@ running test ./error/error10c.foo
 Error: syntax error
 Error: stack underflow. aborting...
 running test ./error/error10d.foo
-(EQ)Error: unsupported operation at line 11
+Error at line 11: (int == bool) is not allowed.
 running test ./error/error10e.foo
-(EQ)Error: unsupported operation at line 11
+Error at line 11: (float == bool) is not allowed.
 running test ./error/error10f.foo
-(NEQ)Error: unsupported operation at line 11
+Error at line 11: (bool != float) is not allowed.
 running test ./error/error10g.foo
-(NEQ)Error: unsupported operation at line 11
+Error at line 11: (bool != int) is not allowed.
 running test ./error/error10h.foo
-Error(CALL IF STMT2): Not a boolean in the if statement
+Error at line 15: if statement accepts only boolean variables for condition.
 running test ./error/error11a.foo
 Error: syntax error
 Error: stack underflow. aborting...
 running test ./error/error11b.foo
-Error(CALL WHILE STMT2): Not a boolean in the if statement
+Error at line 22: while statement accepts only boolean variables for condition.
 running test ./error/error12a.foo
 Error: syntax error
 Error: stack underflow. aborting...
@@ -94,33 +94,33 @@ running test ./error/error13b.foo
 Error: syntax error
 Error: stack underflow. aborting...
 running test ./error/error13c.foo
-Error(313): try to assign wrong type to y at line 30
+Error at line 30: try to assign bool value to float variable y.
 running test ./error/error14a.foo
-Error(313): try to assign wrong type to x at line 30
+Error at line 30: try to assign bool value to int variable x.
 running test ./error/error14b.foo
-Error(CALL ID PARENSARGS): Incorrect type of arguments for boolfunc at line 30
+Error at line 30: incorrect type of parameter(s) is passed to function boolfunc(...).
 running test ./error/error15a.foo
-Error(CALL ID PARENSARGS): Incorrect type of arguments for func_int at line 30
+Error at line 30: incorrect type of parameter(s) is passed to function func_int(...).
 running test ./error/error15b.foo
-Error(CALL ID PARENSARGS): Incorrect type of arguments for func_int at line 31
+Error at line 31: incorrect type of parameter(s) is passed to function func_int(...).
 running test ./error/error15c.foo
 Error: syntax error
 Error: stack underflow. aborting...
 running test ./error/error16a.foo
-Error(CALL ID PARENS ARGS part 2): Incorrect number of arguments for tan2 at line 33
+Error at line 33: incorrect number of parameters are passed to function tan2(...).
 running test ./error/error16b.foo
-Undefined(CALLIDPARENS3) tan3 is used at line 33
+Error at line 33: incorrect type of parameter(s) is passed to function tan3(...).
 running test ./error/error16c.foo
-Undefined(CALLIDPARENS3) x is used at line 34
+Error at line 34: incorrect type of parameter(s) is passed to function x(...).
 running test ./error/error16d.foo
-Undefined(CALLIDPARENS3) y is used at line 34
+Error at line 34: incorrect type of parameter(s) is passed to function y(...).
 running test ./error/error16e.foo
-Undefined(CALLIDPARENS3) b is used at line 34
+Error at line 34: incorrect type of parameter(s) is passed to function b(...).
 running test ./error/error16f.foo
 Success
 running test ./error/error17a.foo
-Error(313): try to assign wrong type to z at line 33
+Error at line 33: undefined z is used.
 running test ./error/error17b.foo
-Error(313): try to assign wrong type to z at line 34
+Error at line 34: undefined z is used.
 running test ./error/error17c.foo
-Error(313): try to assign wrong type to y at line 17
+Error at line 20: try to assign float value to bool variable y.

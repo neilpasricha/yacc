@@ -204,7 +204,7 @@ if(expr.equals("bool")){
     return expr;
 }
 else{
-    System.out.println("Error(CALL WHILE STMT2): Not a boolean in the if statement");
+    System.out.println("Error at line " + linenum +": while statement accepts only boolean variables for condition.");
     throw new Exception();
 }
     }
@@ -217,7 +217,7 @@ if(expr.equals("bool")){
     return expr;
 }
 else{
-    System.out.println("Error(CALL IF STMT2): Not a boolean in the if statement");
+    System.out.println("Error at line " + linenum +": if statement accepts only boolean variables for condition.");
     throw new Exception();
 }
         
@@ -258,8 +258,15 @@ else{
                 Object x = ((ArrayList<Object>)args).get(0);
                 String y = ((String)x);
                 String z = ((String)actualParams.get(ID));
+              //  System.out.println(varsParams.entrySet());
+                
+
+               
+                
                 if(!y.equals(z)){
-                    System.out.println("Error(CALL ID PARENSARGS): Incorrect type of arguments for " +ID+ " at line "+linenum);
+                    System.out.println("Error at line " + linenum +": incorrect type of parameter(s) is passed to function " +ID +"(...).");
+                    //System.out.println(ID +"(...).");
+                    //Error at line 30: incorrect number of parameters are passed to function boolfunc(...).
          throw new Exception();
                 }
                 
@@ -276,7 +283,10 @@ else{
                 return (String)(env.Get(ID));
         }
         else{
-            System.out.println("Error(CALL ID PARENS ARGS part 2): Incorrect number of arguments for " +ID+ " at line "+linenum);
+          //  System.out.println("Error(CALL ID PARENS ARGS part 2): Incorrect number of arguments for " +ID+ " at line "+linenum);
+            System.out.println("Error at line " + linenum +": incorrect number of parameters are passed to function " +ID +"(...).");
+            //Error at line 31: incorrect type of parameter(s) is passed to function func_int(...).
+
          throw new Exception();
         }
             
@@ -286,7 +296,7 @@ else{
     
 
     else{
-        System.out.println("Undefined(CALLIDPARENS3) " +ID + " is used at line " +linenum);
+        System.out.println("Error at line " + linenum +": incorrect type of parameter(s) is passed to function " +ID +"(...).");
          throw new Exception();
     }
 }
@@ -301,18 +311,33 @@ else{
         // 5. if different, then print error message, and throw exception to stop parsing
         // You should re-write this function since this is a simplified version
         String ID_type = (String)(env.Get(ID));
+        String n = "null";
         //System.out.println("testing: ID: " +ID +"; expr: "  );
        //System.out.println("exprtest: " +expr + "; ID: " +ID);
       //  System.out.println("ID: " +ID + "; Id_type: " + ID_type+"; expr: " +expr);
         varsParams.put(ID,"var");
-        if(ID_type == expr)
-
-            return "CallExprStmtIdAssignExpr "+ID+" "+expr;
-        else
-        {
-            System.out.println("Error(313): try to assign wrong type to "+ID+" at line "+linenum);
+        
+      
+        if(env.Get(ID)==null){
+            System.out.println("Error at line "+ linenum+": undefined "+ ID + " is used.");
             throw new Exception();
         }
+            if(ID_type==expr){
+
+            return "CallExprStmtIdAssignExpr "+ID+" "+expr;
+        }
+        
+       
+        if(expr.equals("int")&&ID_type.equals("float")){
+            return "CallExprStmtIdAssignExpr "+ID+" "+expr;
+        }
+        else{
+           // System.out.println("Error(313): try to assign wrong type to "+ID+" at line "+linenum);
+
+            System.out.println("Error at line "+ linenum+": try to assign " +expr + " value to " +ID_type + " variable " +ID+".");
+            throw new Exception();
+        }
+        
     }
 
     /*Object CallExprStmtIdAssignExpr(String ID, String expr) throws Exception
@@ -404,7 +429,8 @@ else{
 
         else
         {
-            System.out.println("(ADD)Error: unsupported operation at line "+linenum);
+           // System.out.println("(ADD)Error: unsupported operation at line "+linenum);
+            System.out.println("Error at line "+ linenum+": (" +expr1 + " + " + expr2 + ") is not allowed.");
             throw new Exception();
         }
     }
@@ -433,7 +459,8 @@ String CallExprMod(String expr1, String expr2) throws Exception
 
         else
         {
-            System.out.println("(MOD)Error: unsupported operation at line "+linenum);
+            //System.out.println("(MOD)Error: unsupported operation at line "+linenum);
+            System.out.println("Error at line "+ linenum+": (" +expr1 + " % " + expr2 + ") is not allowed.");
             throw new Exception();
         }
     }
@@ -460,7 +487,8 @@ String CallExprMinus(String expr1, String expr2) throws Exception
 
         else
         {
-            System.out.println("(MINUS)Error: unsupported operation at line "+linenum);
+           // System.out.println("(MINUS)Error: unsupported operation at line "+linenum);
+            System.out.println("Error at line "+ linenum+": (" +expr1 + " - " + expr2 + ") is not allowed.");
             throw new Exception();
         }
     }
@@ -490,7 +518,8 @@ String CallExprDiv(String expr1, String expr2) throws Exception
 
         else
         {
-            System.out.println("(DIV)Error: unsupported operation at line "+linenum);
+           // System.out.println("(DIV)Error: unsupported operation at line "+linenum);
+            System.out.println("Error at line "+ linenum+": (" +expr1 + " / " + expr2 + ") is not allowed.");
             throw new Exception();
         }
     }
@@ -519,7 +548,8 @@ String CallExprDiv(String expr1, String expr2) throws Exception
 
         else
         {
-            System.out.println("(MUL)Error: unsupported operation at line "+linenum);
+            //System.out.println("(MUL)Error: unsupported operation at line "+linenum);
+            System.out.println("Error at line "+ linenum+": (" +expr1 + " * " + expr2 + ") is not allowed.");
             throw new Exception();
         }
     }
@@ -536,7 +566,8 @@ String CallExprDiv(String expr1, String expr2) throws Exception
 
         else
         {
-            System.out.println("(OR)Error: unsupported operation at line "+linenum);
+            //System.out.println("(OR)Error: unsupported operation at line "+linenum);
+            System.out.println("Error at line "+ linenum+": (" +expr1 + " or " + expr2 + ") is not allowed.");
             throw new Exception();
         }
     }
@@ -549,7 +580,8 @@ String CallExprDiv(String expr1, String expr2) throws Exception
 
         else
         {
-            System.out.println("(AND)Error: unsupported operation at line "+linenum);
+            //System.out.println("(AND)Error: unsupported operation at line "+linenum);
+            System.out.println("Error at line "+ linenum+": (" +expr1 + " and " + expr2 + ") is not allowed.");
             throw new Exception();
         }
     }
@@ -561,7 +593,8 @@ String CallExprNot(String expr1, String expr2) throws Exception
 
         else
         {
-            System.out.println("(NOT)Error: unsupported operation at line "+linenum);
+            //System.out.println("(NOT)Error: unsupported operation at line "+linenum);
+            System.out.println("Error at line "+ linenum+": (" +expr1 + " not " + expr2 + ") is not allowed.");
             throw new Exception();
         }
     }
@@ -583,7 +616,8 @@ String CallExprNot(String expr1, String expr2) throws Exception
 
         else
         {
-            System.out.println("(EQ)Error: unsupported operation at line "+linenum);
+           // System.out.println("(EQ)Error: unsupported operation at line "+linenum);
+            System.out.println("Error at line "+ linenum+": (" +expr1 + " == " + expr2 + ") is not allowed.");
             throw new Exception();
         }
     }
@@ -612,7 +646,8 @@ String CallExprNEQ(String expr1, String expr2) throws Exception
 
         else
         {
-            System.out.println("(NEQ)Error: unsupported operation at line "+linenum);
+            //System.out.println("(NEQ)Error: unsupported operation at line "+linenum);
+            System.out.println("Error at line "+ linenum+": (" +expr1 + " != " + expr2 + ") is not allowed.");
             throw new Exception();
         }
     }
@@ -639,7 +674,8 @@ String CallExprGTHAN(String expr1, String expr2) throws Exception
 
         else
         {
-            System.out.println("(GTHAN)Error: unsupported operation at line "+linenum);
+            //System.out.println("(GTHAN)Error: unsupported operation at line "+linenum);
+            System.out.println("Error at line "+ linenum+": (" +expr1 + " > " + expr2 + ") is not allowed.");
             throw new Exception();
         }
     }
@@ -666,7 +702,8 @@ String CallExprLTHAN(String expr1, String expr2) throws Exception
 
         else
         {
-            System.out.println("(LTHAN)Error: unsupported operation at line "+linenum);
+           // System.out.println("(LTHAN)Error: unsupported operation at line "+linenum);
+            System.out.println("Error at line "+ linenum+": (" +expr1 + " < " + expr2 + ") is not allowed.");
             throw new Exception();
         }
     }
@@ -693,7 +730,7 @@ String CallExprGEQ(String expr1, String expr2) throws Exception
 
         else
         {
-            System.out.println("(GEQ)Error: unsupported operation at line "+linenum);
+            System.out.println("Error at line "+ linenum+": (" +expr1 + " >= " + expr2 + ") is not allowed.");
             throw new Exception();
         }
     }
@@ -719,7 +756,7 @@ String CallExprLEQ(String expr1, String expr2) throws Exception
 
         else
         {
-            System.out.println("(LEQ)Error: unsupported operation at line "+linenum);
+            System.out.println("Error at line "+ linenum+": (" +expr1 + " <= " + expr2 + ") is not allowed.");
             throw new Exception();
         }
     }
@@ -733,15 +770,16 @@ String CallExprLEQ(String expr1, String expr2) throws Exception
         // You should re-write this function since this is a simplified version
         // For example, if ID is function name, you should show error message.
 
-        //String x = (String)(env.Get(ID));
+        String x = (String)(env.Get(ID));
         if(env.Get(ID)==null){
 
-         System.out.println("(ID)Error: Expression is invalid:  " +ID+ " at line "+linenum);
+         System.out.println("Error at line "+ linenum+": undefined " +ID+ " is used.");
          throw new Exception();
         }
 
         return (String)(env.Get(ID));
     }
+
     String CallExprNum(Object num)
     {
         // in this semantic checker, you can return type of value

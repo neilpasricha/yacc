@@ -1,3 +1,9 @@
+/*
+Name:Neil Pasricha
+Class: Compilers
+Professor: Dr. Na
+
+*/
 public class Env {
     // You have to re-implement this to make your SemanticChecker works correct
     private java.util.HashMap<String, Object> table = new java.util.HashMap<String, Object>();
